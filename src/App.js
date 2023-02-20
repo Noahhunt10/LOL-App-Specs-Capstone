@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import ChampionScreen from './screens/ChampionScreen';
+import ProfileScreen from './screens/ProfileScreen';
+import ItemScreen from './screens/ItemScreen';
+import LoginScreen from './screens/LoginScreen';
+import Header from './components/Header'
+import { Routes, Route, Navigate } from 'react-router-dom'
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Header/>
+        <Routes>
+          <Route path='/'></Route>
+          <Route path='/champions' element={<ChampionScreen/>}></Route>
+          <Route path='/items' element={<ItemScreen/>}></Route>
+          <Route path='/login' element={<LoginScreen/>}></Route>
+          <Route path='/profile' element={<ProfileScreen/>}></Route>
+        </Routes>
+    
     </div>
   );
 }

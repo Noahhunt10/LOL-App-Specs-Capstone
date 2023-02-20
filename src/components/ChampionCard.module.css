@@ -1,0 +1,24 @@
+.champion_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .champ_container {
+    background-color: bisque;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 5px
+    
+  }
+  .champion_card h1 {
+  
+    font-size: 2.5vh  ;
+  }
+  .champion_card img {
+    width:100%;
+    height: 100%;
+  }
